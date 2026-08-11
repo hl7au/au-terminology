@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.au.terminology
-canonical: http://hl7.org.au/fhir/terminology
+canonical: http://terminology.hl7.org.au/fhir
 name: AUTerminology
 title: HL7 AU Terminology Implementation Guide
 description: >-
