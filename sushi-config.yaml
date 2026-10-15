@@ -2,7 +2,7 @@
 id: hl7.au.terminology
 canonical: http://terminology.hl7.org.au
 name: AUTerminology
-title: AU Terminology Implementation Guide
+title: HL7 Australia Terminology (THO-AU)
 description: Terminology resources and terminology governance guidance for use in Australian FHIR implementations.
 status: draft
 version: 0.1.0-ci-build
