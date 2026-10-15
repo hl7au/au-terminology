@@ -1,0 +1,60 @@
+# SUSHI configuration for the HL7 AU Terminology Implementation Guide (THO AU)
+id: hl7.au.terminology
+canonical: http://terminology.hl7.org.au
+name: AUTerminology
+title: HL7 Australia Terminology (THO-AU)
+description: Terminology resources and terminology governance guidance for use in Australian FHIR implementations.
+status: draft
+version: 0.1.0-ci-build
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: ci-build
+license: CC-BY-4.0
+jurisdiction: urn:iso:std:iso:3166#AU "Australia"
+publisher:
+  name: HL7 Australia Terminology Work Group
+  url: https://confluence.hl7australia.com/display/TWG
+
+parameters:
+  show-inherited-invariants: false
+
+pages:
+  index.md:
+    title: Home
+  guidance.md:
+    title: Guidance
+    general-governance.md:
+      title: Terminology Governance Guidance
+    hl7au-governance.md:
+      title: HL7 Australia Governance and Processes
+  fhirartefacts.md:
+    title: FHIR Artefacts
+    profiles.md:
+      title: Profiles
+    codesystems.md:
+      title: Code Systems
+    valuesets.md:
+      title: Value Sets
+  support.md:
+    title: Support
+    downloads.md:
+      title: Downloads
+    license.md:
+      title: License and Legal
+  changes.md:
+    title: Change Log
+
+menu:
+  Home: index.html
+  Guidance:
+    Terminology Governance Guidance: general-governance.html
+    HL7 Australia Governance and Processes: hl7au-governance.html
+  FHIR Artefacts:
+    Artefacts Summary: artifacts.html
+    Profiles: profiles.html
+    Code Systems: codesystems.html
+    Value Sets: valuesets.html
+  Support:
+    Downloads: downloads.html
+    License and Legal: license.html
+  Change Log: changes.html

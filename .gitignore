@@ -1,0 +1,14 @@
+# Build outputs
+/output
+/temp
+/template
+/input-cache
+/fsh-generated
+/qa
+txCache/
+*.jar
+/Requirements-fromNarrative.json
+
+# OS files
+.DS_Store
+Thumbs.db
