@@ -18,6 +18,8 @@ These profiles define the constraints common to all value sets and code systems 
 
 Both profiles encode the **common-ground floor only**: the metadata and structure that current AU practice already follows universally. They add no governance or lifecycle metadata.
 
+The profiles are intended to be usable by any HL7 Australia implementation guide that publishes terminology resources. Whether an existing guide adopts them, by having its value sets and code systems declare conformance, is a decision for the work group that owns that guide.
+
 Every constraint was measured against the published packages **AU Base 6.0.0**, **AU Core 2.0.0** and **AU eRequesting 1.0.0** before being written, and the generated profiles were then checked back against those same resources: **all 47 AU-authored resources conform** (30/30 value sets, 17/17 code systems). That is a targeted check of the differential constraints (cardinality, fixed values, the jurisdiction pattern), not a full FHIR validation.
 
 ### Background to the profiles

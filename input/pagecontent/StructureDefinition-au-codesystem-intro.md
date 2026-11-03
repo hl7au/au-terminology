@@ -17,6 +17,7 @@ The following are supported usage scenarios for this profile:
 ### Profile Specific Implementation Guidance
 
 - This profile applies to code systems **authored by HL7 Australia**, whose concepts are fully enumerated in the resource (`CodeSystem.content` = `complete`).
+- Whether the code systems in an existing HL7 Australia implementation guide declare conformance to this profile is a decision for the work group that owns that guide.
 - This profile does **not** apply to a CodeSystem resource that only declares an external code system without its content (`CodeSystem.content` = `not-present`), such as the MIMS and PBS item code system resources in AU Base. Such resources cannot conform to this profile.
 - Every concept **SHALL** be included in `CodeSystem.concept`, and `CodeSystem.count` **SHALL** give the total number of concepts, including nested concepts.
 - `CodeSystem.url` **SHOULD** be in the HL7 Australia namespace `http://terminology.hl7.org.au/CodeSystem/`, which all current HL7 Australia code systems use. The final path segment need not match the resource id.

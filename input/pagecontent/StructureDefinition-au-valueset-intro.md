@@ -17,6 +17,7 @@ The following are supported usage scenarios for this profile:
 ### Profile Specific Implementation Guidance
 
 - This profile applies to value sets **authored by HL7 Australia**. Value sets published by other bodies, such as the NCTS or HL7 International (THO), are governed by their publishers and are out of scope.
+- Whether the value sets in an existing HL7 Australia implementation guide declare conformance to this profile is a decision for the work group that owns that guide.
 - HL7 Australia value sets are **definition-only**:
   - `ValueSet.compose` **SHALL** be populated
   - `ValueSet.expansion` **SHALL NOT** be populated; systems obtain an expansion at the time of use from a terminology server, e.g. using the [`$expand`](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation
