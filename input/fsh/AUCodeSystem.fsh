@@ -6,7 +6,8 @@
 // Every constraint below was measured against all 17 AU-authored CodeSystems in
 // AU Base 6.0.0 / AU Core 2.0.0 / AU eRequesting 1.0.0 on 2026-07-27 and holds
 // 17/17. Exception since the OID slice was added: AU Base resource-tag has the
-// invalid OID urn:oid:22.16.840... (likely a typo for 2.16...), so 16/17 conform.
+// invalid OID urn:oid:22.16.840..., so 16/17 conform. Fixed (2.16...) from
+// AU Base 7.0.0-ballot1.
 //
 // Parent is base R4, NOT the NCTS Complete Code System profile — same reasoning
 // as AUValueSet.fsh.
@@ -42,7 +43,8 @@ practice already follows universally. Does not cover external-system stubs
   // AUOIDIdentifier.fsh). Other identifiers are permitted, including other
   // urn:ietf:rfc:3986 URIs, which do not match the OID profile.
   // Measured: all 47 existing AU resources carry exactly one identifier, a urn:oid;
-  // 46/47 are valid OIDs (AU Base resource-tag has urn:oid:22.16..., a likely typo).
+  // 46/47 are valid OIDs (AU Base 6.0.0 resource-tag has urn:oid:22.16...; fixed
+  // from AU Base 7.0.0-ballot1).
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #profile
 * identifier ^slicing.discriminator.path = "$this"

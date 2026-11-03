@@ -38,7 +38,8 @@ already follows universally. FIRST CUT — for Work Group discussion.
   // AUOIDIdentifier.fsh). Other identifiers are permitted, including other
   // urn:ietf:rfc:3986 URIs, which do not match the OID profile.
   // Measured: all 47 existing AU resources carry exactly one identifier, a urn:oid;
-  // 46/47 are valid OIDs (AU Base resource-tag has urn:oid:22.16..., a likely typo).
+  // 46/47 are valid OIDs (AU Base 6.0.0 resource-tag has urn:oid:22.16...; fixed
+  // from AU Base 7.0.0-ballot1).
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #profile
 * identifier ^slicing.discriminator.path = "$this"
