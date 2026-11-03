@@ -19,7 +19,7 @@ The following are supported usage scenarios for this profile:
 - This profile does **not** apply to a CodeSystem resource that only declares an external code system without its content (`CodeSystem.content` = `not-present`), such as the MIMS and PBS item code system resources in AU Base. Such resources cannot conform to this profile.
 - Every concept **SHALL** be included in `CodeSystem.concept`, and `CodeSystem.count` **SHALL** give the total number of concepts, including nested concepts.
 - `CodeSystem.url` **SHOULD** be in the HL7 Australia namespace `http://terminology.hl7.org.au/CodeSystem/`, which all current HL7 Australia code systems use. The final path segment need not match the resource id.
-- `CodeSystem.identifier:oid` **SHALL** carry the code system's OID, with `system` = `urn:ietf:rfc:3986` and `value` = `urn:oid:[OID]`. Other business identifiers **MAY** also be included, using a different `system`.
+- `CodeSystem.identifier:oid` **SHALL** carry the code system's OID, conforming to [AU OID Identifier](StructureDefinition-au-oid-identifier.html): `system` = `urn:ietf:rfc:3986` and `value` = `urn:oid:[OID]`. Other business identifiers **MAY** also be included.
 - `CodeSystem.status` is not fixed. A code system that is no longer recommended for use **MAY** be published as `retired`.
 - `CodeSystem.publisher` is fixed to "HL7 Australia" and `CodeSystem.experimental` to `false`. `CodeSystem.jurisdiction` **SHALL** include Australia (`urn:iso:std:iso:3166#AU`).
 - `CodeSystem.valueSet`, the "all codes" value set, **MAY** be populated.

@@ -34,21 +34,18 @@ already follows universally. FIRST CUT — for Work Group discussion.
 // Identity
 // -----------------------------------------------------------------------------
 * url 1..1
-  // Business identifiers: an open slice requires the OID, as an RFC 3986 URI;
-  // other identifiers are permitted. Discriminated on system, so any other
-  // identifier that also uses urn:ietf:rfc:3986 falls into the oid slice.
+  // Business identifiers: an open slice, by profile, requires the OID (see
+  // AUOIDIdentifier.fsh). Other identifiers are permitted, including other
+  // urn:ietf:rfc:3986 URIs, which do not match the OID profile.
   // Measured: all 47 existing AU resources carry exactly one identifier, a urn:oid.
 * identifier 1..*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #profile
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice for the value set's OID. Other identifiers are permitted."
 * identifier contains oid 1..1
+* identifier[oid] only AUOIDIdentifier
 * identifier[oid] ^short = "The value set's OID"
-* identifier[oid].system 1..1
-* identifier[oid].system = "urn:ietf:rfc:3986" (exactly)
-* identifier[oid].value 1..1
-* identifier[oid].value ^comment = "The value set's OID, expressed as a URI (urn:oid:[OID])."
 * version 1..1
 * name 1..1
 * title 1..1
