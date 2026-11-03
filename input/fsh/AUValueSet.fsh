@@ -37,7 +37,8 @@ already follows universally. FIRST CUT — for Work Group discussion.
   // Business identifiers: an open slice, by profile, requires the OID (see
   // AUOIDIdentifier.fsh). Other identifiers are permitted, including other
   // urn:ietf:rfc:3986 URIs, which do not match the OID profile.
-  // Measured: all 47 existing AU resources carry exactly one identifier, a urn:oid.
+  // Measured: all 47 existing AU resources carry exactly one identifier, a urn:oid;
+  // 46/47 are valid OIDs (AU Base resource-tag has urn:oid:22.16..., a likely typo).
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #profile
 * identifier ^slicing.discriminator.path = "$this"

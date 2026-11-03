@@ -20,4 +20,6 @@ Both profiles encode the **common-ground floor only**: the metadata and structur
 
 The profiles are intended to be usable by any HL7 Australia implementation guide that publishes terminology resources. Whether an existing guide adopts them, by having its value sets and code systems declare conformance, is a decision for the work group that owns that guide.
 
-Every constraint was measured against the published packages **AU Base 6.0.0**, **AU Core 2.0.0** and **AU eRequesting 1.0.0** before being written, and the generated profiles were then checked back against those same resources: **all 47 AU-authored resources conform** (30/30 value sets, 17/17 code systems). That is a targeted check of the differential constraints (cardinality, fixed values, the jurisdiction pattern), not a full FHIR validation.
+Every constraint was measured against the published packages **AU Base 6.0.0**, **AU Core 2.0.0** and **AU eRequesting 1.0.0** before being written, and the generated profiles were then checked back against those same resources: **46 of the 47 AU-authored resources conform** (30/30 value sets, 16/17 code systems). That is a targeted check of the differential constraints (cardinality, fixed values, the jurisdiction pattern, the OID format), not a full FHIR validation.
+
+The exception is the AU Base [Resource Tag](https://hl7.org.au/fhir/CodeSystem-resource-tag.html) code system, whose identifier `urn:oid:22.16.840.1.113883.2.3.4.1.4.35` is not a valid OID (the first arc of an OID is 0, 1 or 2). It appears to be a typo for `2.16.840.1.113883.2.3.4.1.4.35`.
