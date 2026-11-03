@@ -41,12 +41,14 @@ practice already follows universally. Does not cover external-system stubs
 * identifier.system 1..1
 * identifier.system = "urn:ietf:rfc:3986" (exactly)
 * identifier.value 1..1
+* identifier.value ^comment = "The code system's OID, expressed as a URI (urn:oid:...)."
 * version 1..1
 * name 1..1
 * title 1..1
   // All 17 are #active today; not pinned, to match AUValueSet and leave
   // retirement available without a profile change.
 * status 1..1
+* status ^comment = "Not fixed. A code system that is no longer recommended for use may be published as retired."
 
 // -----------------------------------------------------------------------------
 // Publication metadata
@@ -58,8 +60,10 @@ practice already follows universally. Does not cover external-system stubs
 * description 1..1
 * date 1..1
 * contact 1..*
+* contact ^comment = "At least one contact is required; more than one is permitted."
 * jurisdiction 1..1
 * jurisdiction = urn:iso:std:iso:3166#AU
+* jurisdiction ^comment = "Must include Australia (urn:iso:std:iso:3166#AU). Additional jurisdiction codings are permitted."
 * copyright 1..1
 
 // -----------------------------------------------------------------------------
@@ -70,6 +74,7 @@ practice already follows universally. Does not cover external-system stubs
 * content = #complete (exactly)
   // count is the TOTAL number of concepts, including nested ones.
 * count 1..1
+* count ^comment = "The total number of concepts in the code system, including nested concepts."
 * concept 1..*
 
 // -----------------------------------------------------------------------------
@@ -82,6 +87,7 @@ practice already follows universally. Does not cover external-system stubs
   // canonical URL resolves. That is an IG QA rule, not a profile constraint.
   // Left at base cardinality pending the WG decision.
 * valueSet 0..1
+* valueSet ^comment = "When populated, should refer to a value set that is actually published. Whether this element should be mandatory is an open Work Group question."
 
   // WG steer: stays optional. Reasonable to omit for small
   // flat code systems, and declaring is-a without nested concepts is legitimate

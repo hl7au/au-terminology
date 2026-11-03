@@ -40,12 +40,14 @@ already follows universally. FIRST CUT — for Work Group discussion.
 * identifier.system 1..1
 * identifier.system = "urn:ietf:rfc:3986" (exactly)
 * identifier.value 1..1
+* identifier.value ^comment = "The value set's OID, expressed as a URI (urn:oid:...)."
 * version 1..1
 * name 1..1
 * title 1..1
   // status is mandatory in base R4 and is NOT pinned here: AU Base already
   // publishes one retired value set, so fixing #active would break it.
 * status 1..1
+* status ^comment = "Not fixed. A value set that is no longer recommended for use may be published as retired."
 
 // -----------------------------------------------------------------------------
 // Publication metadata
@@ -58,9 +60,11 @@ already follows universally. FIRST CUT — for Work Group discussion.
 * date 1..1
   // 23 of 30 carry one contact, 7 carry two — so 1..*, not 1..1.
 * contact 1..*
+* contact ^comment = "At least one contact is required; more than one is permitted."
   // Pattern, not fixed: additional jurisdiction codings stay legal.
 * jurisdiction 1..1
 * jurisdiction = urn:iso:std:iso:3166#AU
+* jurisdiction ^comment = "Must include Australia (urn:iso:std:iso:3166#AU). Additional jurisdiction codings are permitted."
 * copyright 1..1
 
 // -----------------------------------------------------------------------------
@@ -70,6 +74,7 @@ already follows universally. FIRST CUT — for Work Group discussion.
   // Verified: compose present 30/30, expansion present 0/30.
 * compose 1..1
 * expansion 0..0
+* expansion ^comment = "HL7 Australia value sets are definition-only. Obtain an expansion at the time of use from a terminology server, e.g. using $expand."
 
 // -----------------------------------------------------------------------------
 // NOT constrained here, and why
