@@ -21,7 +21,7 @@ The following are supported usage scenarios for this profile:
   - `ValueSet.expansion` **SHALL NOT** be populated; systems obtain an expansion at the time of use from a terminology server, e.g. using the [`$expand`](http://hl7.org/fhir/R4/valueset-operation-expand.html) operation
 - Reference terminologies such as SNOMED CT-AU and LOINC are included by reference in `ValueSet.compose.include.system`; their content is never republished as part of an HL7 Australia value set.
 - `ValueSet.url` **SHOULD** be in the HL7 Australia namespace `http://terminology.hl7.org.au/ValueSet/`, which all current HL7 Australia value sets use. The final path segment need not match the resource id.
-- A value set carries exactly one business identifier, its OID, in `ValueSet.identifier`.
+- `ValueSet.identifier:oid` **SHALL** carry the value set's OID, with `system` = `urn:ietf:rfc:3986` and `value` = `urn:oid:[OID]`. Other business identifiers **MAY** also be included, using a different `system`.
 - `ValueSet.status` is not fixed. A value set that is no longer recommended for use **MAY** be published as `retired`.
 - `ValueSet.publisher` is fixed to "HL7 Australia" and `ValueSet.experimental` to `false`. `ValueSet.jurisdiction` **SHALL** include Australia (`urn:iso:std:iso:3166#AU`).
 - `ValueSet.immutable`, `ValueSet.useContext`, `ValueSet.purpose`, `ValueSet.compose.lockedDate` and `ValueSet.compose.inactive` **MAY** be populated, but no current HL7 Australia value set uses them.
