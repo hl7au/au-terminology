@@ -87,7 +87,7 @@ practice already follows universally. Does not cover external-system stubs
   // canonical URL resolves. That is an IG QA rule, not a profile constraint.
   // Left at base cardinality pending the WG decision.
 * valueSet 0..1
-* valueSet ^comment = "When populated, should refer to a value set that is actually published. Whether this element should be mandatory is an open Work Group question."
+* valueSet ^comment = "Whether this element should be mandatory, and whether it should be required to refer to a published value set, are open Work Group questions."
 
   // WG steer: stays optional. Reasonable to omit for small
   // flat code systems, and declaring is-a without nested concepts is legitimate

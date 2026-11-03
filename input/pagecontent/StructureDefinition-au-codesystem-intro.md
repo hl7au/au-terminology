@@ -24,15 +24,13 @@ The following are supported usage scenarios for this profile:
 - A code system carries exactly one business identifier, its OID, in `CodeSystem.identifier`.
 - `CodeSystem.status` is not fixed. A code system that is no longer recommended for use **MAY** be published as `retired`.
 - `CodeSystem.publisher` is fixed to "HL7 Australia" and `CodeSystem.experimental` to `false`. `CodeSystem.jurisdiction` **SHALL** include Australia (`urn:iso:std:iso:3166#AU`).
-- When populating the "all codes" value set:
-  - `CodeSystem.valueSet` **MAY** be populated
-  - when populated, it **SHOULD** refer to a value set that is actually published; a canonical URL that does not resolve gives consumers nothing to expand
+- `CodeSystem.valueSet`, the "all codes" value set, **MAY** be populated.
 - `CodeSystem.hierarchyMeaning` **MAY** be populated. It describes the meaning of the code system's hierarchy, and may be declared even when the code system has no nested concepts. All current HL7 Australia code systems that populate it use `is-a`.
 - `CodeSystem.useContext`, `CodeSystem.purpose`, `CodeSystem.supplements`, `CodeSystem.filter` and `CodeSystem.property` **MAY** be populated, but no current HL7 Australia code system uses them.
 
 <div class="stu-note" markdown="1">
 
-Whether `CodeSystem.valueSet` should be mandatory, and whether an explicit, published "all codes" value set should be required, is an [open question](open-questions.html#1-all-codes-value-sets). So is whether external code system declarations (`content` = `not-present`) should get a profile of their own; see [Open questions](open-questions.html#2-external-system-code-systems).
+Whether `CodeSystem.valueSet` should be mandatory, and whether it should be required to refer to an explicit, published "all codes" value set, is an [open question](open-questions.html#1-all-codes-value-sets). Most current HL7 Australia code systems populate it, but most of the URLs it carries do not resolve to a published value set, and a profile cannot require that a canonical URL resolves. So is whether external code system declarations (`content` = `not-present`) should get a profile of their own; see [Open questions](open-questions.html#2-external-system-code-systems).
 
 Governance and lifecycle metadata, and an AU stewardship extension, are under consideration and are not part of this profile. See [the option spectrum](design.html#the-option-spectrum) and [Stewardship](stewardship.html).
 
