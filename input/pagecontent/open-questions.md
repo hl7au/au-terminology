@@ -51,5 +51,5 @@ but only the STU3 (`-2`) versions were retrievable from the live service.
 ---
 
 `hierarchyMeaning` is deliberately **not** on this list. The current steer is
-that it stays optional; the reasoning is in
+that it should be populated but stays optional in the profile; the reasoning is in
 [Background and evidence](background.html#hierarchymeaning--occasional-and-legitimately-so).

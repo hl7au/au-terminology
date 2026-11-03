@@ -132,8 +132,9 @@ and declares it correctly; no code system expresses hierarchy via `parent` or
 system, not whether this instance enumerates nesting, and declaring `is-a` makes
 `is-a` and `descendent-of` filters well-defined.
 
-The current steer is not to mandate it. Omitting it is reasonable for small flat
-code systems, so it stays optional at base R4 cardinality.
+The current steer is that it **should** be populated, but not mandated: it stays
+at base R4 cardinality, so the 14 code systems that omit it today still
+conform, and the profile guidance recommends it.
 
 #### Consequences
 
@@ -156,7 +157,7 @@ can be made for any of them:
 - **ValueSet:** `useContext`, `purpose`, `immutable`, `compose.lockedDate`,
   `compose.inactive`.
 - **CodeSystem:** `useContext`, `purpose`, `supplements`, `filter`, `property`,
-  `hierarchyMeaning` (occasional today).
+  `hierarchyMeaning` (occasional today; now recommended, see above).
 
 Lifecycle and provenance metadata is treated separately — see
 [Design decisions](design.html).

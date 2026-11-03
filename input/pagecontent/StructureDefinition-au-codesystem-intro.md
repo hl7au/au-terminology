@@ -25,7 +25,8 @@ The following are supported usage scenarios for this profile:
 - `CodeSystem.status` is not fixed. A code system that is no longer recommended for use **MAY** be published as `retired`.
 - `CodeSystem.publisher` is fixed to "HL7 Australia" and `CodeSystem.experimental` to `false`. `CodeSystem.jurisdiction` **SHALL** include Australia (`urn:iso:std:iso:3166#AU`).
 - `CodeSystem.valueSet`, the "all codes" value set, **MAY** be populated.
-- `CodeSystem.hierarchyMeaning` **MAY** be populated. It describes the meaning of the code system's hierarchy, and may be declared even when the code system has no nested concepts. All current HL7 Australia code systems that populate it use `is-a`.
+- `CodeSystem.caseSensitive` **SHALL** be populated.
+- `CodeSystem.hierarchyMeaning` **SHOULD** be populated. It describes the meaning of the code system's hierarchy, and should be declared even when the code system has no nested concepts: declaring `is-a` makes `is-a` and `descendent-of` filters on the code system well-defined. All current HL7 Australia code systems that populate it use `is-a`.
 - `CodeSystem.useContext`, `CodeSystem.purpose`, `CodeSystem.supplements`, `CodeSystem.filter` and `CodeSystem.property` **MAY** be populated, but no current HL7 Australia code system uses them.
 
 <div class="stu-note" markdown="1">

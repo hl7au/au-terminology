@@ -89,11 +89,12 @@ practice already follows universally. Does not cover external-system stubs
 * valueSet 0..1
 * valueSet ^comment = "Whether this element should be mandatory, and whether it should be required to refer to a published value set, are open Work Group questions."
 
-  // WG steer: stays optional. Reasonable to omit for small
-  // flat code systems, and declaring is-a without nested concepts is legitimate
-  // — the element describes the code system's hierarchy semantics, not whether
-  // this instance enumerates nesting. Measured: 3/17 populated, all #is-a.
+  // SHOULD be populated (guidance, not cardinality): mandating it would fail
+  // 14/17 existing code systems. Declaring is-a without nested concepts is
+  // legitimate — the element describes the code system's hierarchy semantics,
+  // not whether this instance enumerates nesting. Measured: 3/17 populated, all #is-a.
 * hierarchyMeaning 0..1
+* hierarchyMeaning ^comment = "Should be populated, including for code systems with no nested concepts. Declaring is-a makes is-a and descendent-of filters well-defined."
 
 // -----------------------------------------------------------------------------
 // NOT constrained here, and why

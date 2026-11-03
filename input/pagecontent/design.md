@@ -75,9 +75,9 @@ OID. A second, non-OID identifier would need `1..*` plus a slice.
 7 carry two.
 
 **`CodeSystem.valueSet` and `hierarchyMeaning` are left at base cardinality.**
-Both are open questions. Because base R4 already has them at `0..1`, no
-differential entry is emitted, so the reasoning lives in the FSH comments rather
-than in the StructureDefinition.
+Whether to mandate `valueSet` is an open question. `hierarchyMeaning` **should**
+be populated, but mandating it would fail 14 of 17 existing code systems, so the
+recommendation is made in the profile guidance rather than by cardinality.
 
 ### Cross-cutting decisions
 
