@@ -32,7 +32,7 @@ The following are supported usage scenarios for this profile:
 
 <div class="stu-note" markdown="1">
 
-Whether `CodeSystem.valueSet` should be mandatory, and whether an explicit, published "all codes" value set should be required, is an [open question](open-questions.html#all-codes-value-sets). So is whether external code system declarations (`content` = `not-present`) should get a profile of their own; see [Open questions](open-questions.html#external-system-code-systems).
+Whether `CodeSystem.valueSet` should be mandatory, and whether an explicit, published "all codes" value set should be required, is an [open question](open-questions.html#1-all-codes-value-sets). So is whether external code system declarations (`content` = `not-present`) should get a profile of their own; see [Open questions](open-questions.html#2-external-system-code-systems).
 
 Governance and lifecycle metadata, and an AU stewardship extension, are under consideration and are not part of this profile. See [the option spectrum](design.html#the-option-spectrum) and [Stewardship](stewardship.html).
 

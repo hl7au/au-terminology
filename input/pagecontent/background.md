@@ -1,11 +1,9 @@
-# Background and evidence
-
 The profiles in this guide were not designed from first principles. They
 formalise what HL7 Australia already publishes, so this page sets out what was
 surveyed, what AU practice actually looks like, and where it is and is not
 consistent.
 
-## What was surveyed
+### What was surveyed
 
 Four inputs, all read from primary sources — live profile JSON and published IG
 resources:
@@ -17,7 +15,7 @@ resources:
 - **Current AU practice** — what AU Base, AU Core and AU eRequesting actually
   publish.
 
-### Landscape at a glance
+#### Landscape at a glance
 
 | Dimension | NCTS | R4 core `Shareable*` | CRMI | AU IGs today |
 |---|---|---|---|---|
@@ -30,7 +28,7 @@ resources:
 | CodeSystem content | `complete` only (fixed); no fragment profile | ≥1 inline concept | shareable + publishable only | complete + inline, plus `not-present` stubs |
 | `jurisdiction = AU` | not constrained | not constrained | must-support (publishable) | always AU (house style) |
 
-### Key findings
+#### Key findings
 
 - **AU practice is already NCTS-shaped and consistent.** Every AU-authored
   value set and code system in AU Base and AU eRequesting claims an NCTS profile
@@ -58,7 +56,7 @@ resources:
   contact, jurisdiction, copyright, date, description — is what AU already
   populates.
 
-## The common-ground floor
+### The common-ground floor
 
 Formalising what AU already does needs no debate.
 
@@ -90,13 +88,13 @@ This floor was verified as genuinely universal: all 47 AU-authored resources —
 element, with `publisher = HL7 Australia`, `experimental = false` and
 jurisdiction AU holding in every case. Zero deviations.
 
-## Element-level conformance
+### Element-level conformance
 
 House style is uniform, but element-level conformance is not. Measured directly
 from the published packages — AU Base 6.0.0, AU Core 2.0.0, AU eRequesting 1.0.0
 — against the 17 AU-authored code systems.
 
-### `CodeSystem.valueSet` — near-universally populated, near-universally dangling
+#### `CodeSystem.valueSet` — near-universally populated, near-universally dangling
 
 | | count |
 |---|---|
@@ -116,7 +114,7 @@ Two of the 12 are near-misses rather than phantoms —
 all-codes ValueSet, but eRequesting publishes it under its own URL rather than
 the `terminology.hl7.org.au/ValueSet/<same-leaf>` the CodeSystem declares.
 
-### Explicit vs implicit all-codes ValueSet — implicit is the norm
+#### Explicit vs implicit all-codes ValueSet — implicit is the norm
 
 An explicit all-codes ValueSet exists for 6 of 17; the implicit one is relied on
 for 11 of 17. The two mechanisms agree in only 3 of 17 cases: 3 coherent; 10
@@ -125,7 +123,7 @@ has an all-codes ValueSet but does not declare it; 1 has neither. Both
 `not-present` external stubs do have explicit all-codes ValueSets and both omit
 `CodeSystem.valueSet`.
 
-### `hierarchyMeaning` — occasional, and legitimately so
+#### `hierarchyMeaning` — occasional, and legitimately so
 
 Populated on 3 of 17, all `is-a`. Exactly one code system has nested concepts
 and declares it correctly; no code system expresses hierarchy via `parent` or
@@ -137,7 +135,7 @@ system, not whether this instance enumerates nesting, and declaring `is-a` makes
 The current steer is not to mandate it. Omitting it is reasonable for small flat
 code systems, so it stays optional at base R4 cardinality.
 
-### Consequences
+#### Consequences
 
 - **Blessing current practice is not entirely cost-free.** There is no single
   consistent practice to bless: a profile mandating `valueSet` would fail 12 of
@@ -150,7 +148,7 @@ code systems, so it stays optional at base R4 cardinality.
   that the guide's process and governance remit needs publication checks as well
   as profiles.
 
-## R4 elements available but unused
+### R4 elements available but unused
 
 Base-R4 elements neither mandated nor commonly populated today, listed so a case
 can be made for any of them:

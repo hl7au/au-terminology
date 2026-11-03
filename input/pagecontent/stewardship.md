@@ -1,6 +1,4 @@
-# Stewardship
-
-## The need
+### The need
 
 A shared terminology guide hosts content **owned by different work groups**.
 Governing that content — adding and removing codes, changing metadata, even
@@ -15,7 +13,7 @@ For each resource, four things are worth tracking persistently:
 
 That is a RACI, attached to the resource.
 
-## Prior art, and its limits
+### Prior art, and its limits
 
 HL7's own Terminology (THO) publication embeds **only the owning work group** in
 the resource, via the `structuredefinition-wg` extension. Approve, consult and
@@ -30,7 +28,7 @@ Two limits for HL7 Australia:
 Current AU Base resources carry neither the work group tag nor any governance
 metadata.
 
-## The proposal — represent it in the resource
+### The proposal — represent it in the resource
 
 One **AU stewardship extension**, repeating, carrying a **role × party** pair:
 
@@ -49,7 +47,7 @@ owner and approver are the originating work group; consulted is any work group
 whose IG binds that value set; informed is ADHA and implementers. The change
 request routes itself, and nothing lands by surprise.
 
-## What it needs
+### What it needs
 
 - **A new AU extension.** HL7's `structuredefinition-wg` cannot be reused: it
   binds the international work-group list as a **required** binding, so AU codes
@@ -58,7 +56,7 @@ request routes itself, and nothing lands by surprise.
   system and a **stewardship-role** code system. Both are themselves AU
   terminology, authored with the very profiles in this guide.
 
-## Alternatives considered
+### Alternatives considered
 
 - **An external stewardship registry** — queryable, but drifts from the
   resources it describes.

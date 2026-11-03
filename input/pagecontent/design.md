@@ -1,9 +1,7 @@
-# Design decisions
-
 The choices behind the first-cut profiles, and the alternatives that remain
 live. Nothing here is settled; see [Open questions](open-questions.html).
 
-## Profile shape — one profile or layered
+### Profile shape — one profile or layered
 
 **Single profile per resource type — recommended.** HL7 Australia publishes one
 class of terminology resource. Any governance metadata can simply be *optional*
@@ -28,7 +26,7 @@ A sketch of that sibling profile is carried as a comment at the foot of
 all while the other does, so a sibling profile could not mandate the full
 metadata floor without that resource being remediated first.
 
-## Governance metadata
+### Governance metadata
 
 **CRMI Publishable is the right reference point** — its core is what AU already
 populates. Its long extension list should be treated as a **pick-list to curate,
@@ -44,7 +42,7 @@ These are largely standard FHIR / Extensions-Pack extensions — AU Base already
 depends on the Extensions Pack — so adopting the *concepts* needs no CRMI
 dependency.
 
-## The option spectrum
+### The option spectrum
 
 Governance depth on the single AU profile, all avoiding the "Avoid" extensions
 above:
@@ -60,7 +58,7 @@ shapes are written as commented blocks at the foot of `AUValueSet.fsh`, ready to
 uncomment if the Work Group chooses either. Any option could instead be layered.
 Governance fields stay optional until there is a process to back them.
 
-## Choices made in the first cut, and how to reverse them
+### Choices made in the first cut, and how to reverse them
 
 **Parent is base R4, not the NCTS profiles.** Alignment is an open decision, so
 the first cut stays neutral and restates the constraints rather than inheriting
@@ -81,7 +79,7 @@ Both are open questions. Because base R4 already has them at `0..1`, no
 differential entry is emitted, so the reasoning lives in the FSH comments rather
 than in the StructureDefinition.
 
-## Cross-cutting decisions
+### Cross-cutting decisions
 
 Independent of the option chosen:
 
@@ -93,7 +91,7 @@ Independent of the option chosen:
 - **External-system stubs** — profile the pattern via a sibling profile or leave
   it unprofiled, and who should declare these resources.
 
-## Not yet drafted
+### Not yet drafted
 
 - The **AU stewardship extension** — see [Stewardship](stewardship.html). It
   depends on two new AU code systems, neither of which exists yet.
