@@ -2,7 +2,7 @@
 // AU CodeSystem — FIRST CUT for Terminology Work Group discussion
 //
 // Scope: the "common ground" floor only — Option 1, "bless current practice".
-// See background.html and design.html in this IG for the evidence and options.
+// The evidence and options are in the Terminology WG's analysis (Confluence).
 // Every constraint below was measured against all 17 AU-authored CodeSystems in
 // AU Base 6.0.0 / AU Core 2.0.0 / AU eRequesting 1.0.0 on 2026-07-27 and holds
 // 17/17 — so this profile breaks no existing AU resource.
@@ -16,7 +16,7 @@
 // content = #not-present and today claim no profile at all. Covering those
 // needs a SECOND, SIBLING profile — see the note at the foot of this file.
 // This is the one place the "single profile per resource" recommendation does
-// not stretch — see design.html.
+// not stretch — see the WG analysis.
 // =============================================================================
 
 Profile:     AUCodeSystem
@@ -80,7 +80,7 @@ practice already follows universally. Does not cover external-system stubs
 // -----------------------------------------------------------------------------
 // Deliberately left OPEN — Work Group decisions
 // -----------------------------------------------------------------------------
-  // OPEN (see open-questions.html): mandate the "all codes" value set pointer?
+  // OPEN (WG open question): mandate the "all codes" value set pointer?
   // Measured today: populated 15/17, but only 3/17 point at a ValueSet that is
   // actually published. Mandating 1..1 would be satisfied by 15/17 as-is, but
   // would NOT fix the 12 dangling URLs — no profile can require that a

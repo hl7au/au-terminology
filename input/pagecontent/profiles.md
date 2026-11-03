@@ -1,6 +1,6 @@
 <div class="stu-note" markdown="1">
 
-The profiles on this page are a **first cut for HL7 AU Terminology Work Group discussion**. They have not been balloted, and every design choice behind them is open for Work Group decision. See [Open questions](open-questions.html).
+The profiles on this page are a **first cut for HL7 AU Terminology Work Group discussion**. They have not been balloted, and every design choice behind them is open for Work Group decision.
 
 </div><!-- stu-note -->
 
@@ -21,12 +21,3 @@ Both profiles encode the **common-ground floor only**: the metadata and structur
 The profiles are intended to be usable by any HL7 Australia implementation guide that publishes terminology resources. Whether an existing guide adopts them, by having its value sets and code systems declare conformance, is a decision for the work group that owns that guide.
 
 Every constraint was measured against the published packages **AU Base 6.0.0**, **AU Core 2.0.0** and **AU eRequesting 1.0.0** before being written, and the generated profiles were then checked back against those same resources: **all 47 AU-authored resources conform** (30/30 value sets, 17/17 code systems). That is a targeted check of the differential constraints (cardinality, fixed values, the jurisdiction pattern), not a full FHIR validation.
-
-### Background to the profiles
-
-The analysis behind the profiles, and the decisions still to be made, are set out in:
-
-- [Background and evidence](background.html): what was surveyed, how AU practice actually looks, and the element-level measurements
-- [Design decisions](design.html): profile shape, governance metadata, and the option spectrum
-- [Stewardship](stewardship.html): the proposed model for tracking who owns, approves, is consulted about, and is informed of changes
-- [Open questions](open-questions.html): the decisions requested of the Work Group

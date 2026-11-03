@@ -1,8 +1,6 @@
-See [Background and evidence](background.html) for how current AU practice was measured, and [Design decisions](design.html) for why this profile takes the shape it does.
-
 <div class="stu-note" markdown="1">
 
-This profile is a **first cut for HL7 AU Terminology Work Group discussion**. It encodes only the metadata and structure that current AU value sets already follow (Option 1, "bless current practice"). Its parent is base R4 `ValueSet`, not the NCTS Composed Value Set profile. Whether to align to NCTS or CRMI, and whether to add governance metadata, are open decisions. See [Open questions](open-questions.html).
+This profile is a **first cut for HL7 AU Terminology Work Group discussion**. It encodes only the metadata and structure that current AU value sets already follow (Option 1, "bless current practice"). Its parent is base R4 `ValueSet`, not the NCTS Composed Value Set profile. Whether to align to NCTS or CRMI, and whether to add governance metadata, are open Work Group decisions.
 
 </div><!-- stu-note -->
 
@@ -30,6 +28,6 @@ The following are supported usage scenarios for this profile:
 
 <div class="stu-note" markdown="1">
 
-Governance and lifecycle metadata, such as `versionAlgorithm`, `approvalDate`, `lastReviewDate` and `effectivePeriod`, and an AU stewardship extension are under consideration and are not part of this profile. See [the option spectrum](design.html#the-option-spectrum) and [Stewardship](stewardship.html).
+Governance and lifecycle metadata, such as `versionAlgorithm`, `approvalDate`, `lastReviewDate` and `effectivePeriod`, and an AU stewardship extension are under consideration and are not part of this profile.
 
 </div><!-- stu-note -->

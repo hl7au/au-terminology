@@ -2,13 +2,13 @@
 // AU ValueSet — FIRST CUT for Terminology Work Group discussion
 //
 // Scope: the "common ground" floor only — Option 1, "bless current practice".
-// See background.html and design.html in this IG for the evidence and options.
+// The evidence and options are in the Terminology WG's analysis (Confluence).
 // Every constraint below was measured against all 30 AU-authored ValueSets in
 // AU Base 6.0.0 / AU Core 2.0.0 / AU eRequesting 1.0.0 on 2026-07-27 and holds
 // 30/30 — so this profile breaks no existing AU resource.
 //
 // Parent is base R4, NOT the NCTS Composed Value Set profile. Alignment is an
-// open WG decision (see design.html, cross-cutting decisions), so the first
+// open WG decision (see the WG analysis, cross-cutting decisions), so the first
 // cut stays neutral and
 // restates the constraints rather than inheriting them. Switching to
 // NCTS-derived is a one-line Parent: change plus dropping the restatements.

@@ -1,8 +1,6 @@
-See [Background and evidence](background.html) for how current AU practice was measured, and [Design decisions](design.html) for why this profile takes the shape it does.
-
 <div class="stu-note" markdown="1">
 
-This profile is a **first cut for HL7 AU Terminology Work Group discussion**. It encodes only the metadata and structure that current AU code systems already follow (Option 1, "bless current practice"). Its parent is base R4 `CodeSystem`, not the NCTS Complete Code System profile. Whether to align to NCTS or CRMI, and whether to add governance metadata, are open decisions. See [Open questions](open-questions.html).
+This profile is a **first cut for HL7 AU Terminology Work Group discussion**. It encodes only the metadata and structure that current AU code systems already follow (Option 1, "bless current practice"). Its parent is base R4 `CodeSystem`, not the NCTS Complete Code System profile. Whether to align to NCTS or CRMI, and whether to add governance metadata, are open Work Group decisions.
 
 </div><!-- stu-note -->
 
@@ -31,8 +29,8 @@ The following are supported usage scenarios for this profile:
 
 <div class="stu-note" markdown="1">
 
-Whether `CodeSystem.valueSet` should be mandatory, and whether it should be required to refer to an explicit, published "all codes" value set, is an [open question](open-questions.html#1-all-codes-value-sets). Most current HL7 Australia code systems populate it, but most of the URLs it carries do not resolve to a published value set, and a profile cannot require that a canonical URL resolves. So is whether external code system declarations (`content` = `not-present`) should get a profile of their own; see [Open questions](open-questions.html#2-external-system-code-systems).
+Whether `CodeSystem.valueSet` should be mandatory, and whether it should be required to refer to an explicit, published "all codes" value set, is an open Work Group question. Most current HL7 Australia code systems populate it, but most of the URLs it carries do not resolve to a published value set, and a profile cannot require that a canonical URL resolves. So is whether external code system declarations (`content` = `not-present`) should get a profile of their own.
 
-Governance and lifecycle metadata, and an AU stewardship extension, are under consideration and are not part of this profile. See [the option spectrum](design.html#the-option-spectrum) and [Stewardship](stewardship.html).
+Governance and lifecycle metadata, and an AU stewardship extension, are under consideration and are not part of this profile.
 
 </div><!-- stu-note -->

@@ -31,14 +31,6 @@ pages:
     title: FHIR Artefacts
     profiles.md:
       title: Profiles
-      background.md:
-        title: Background and Evidence
-      design.md:
-        title: Design Decisions
-      stewardship.md:
-        title: Stewardship
-      open-questions.md:
-        title: Open Questions
     codesystems.md:
       title: Code Systems
     valuesets.md:
